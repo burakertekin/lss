@@ -109,7 +109,7 @@ def getNumRangeStr(numbers):
     dic = {}
 
     numList = sorted(numbers)
-    # print numbers
+
     for num in numList:
         if prevNum and prevNum + 1 != int(num):
             index += 1
@@ -140,7 +140,8 @@ def printRange(numList, fileName, match):
 
 def lss(fileNames):
     """
-    Main function.
+    Main function. Group filenames by length and print according to item count of
+    these groups.
     """
     groupedFileNames = groupByStrLength(fileNames)
     for group in groupedFileNames:
